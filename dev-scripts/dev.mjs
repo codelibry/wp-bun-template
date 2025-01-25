@@ -7,12 +7,12 @@
 
 import path from 'path';
 import { Bundler } from 'bun-bundler';
-import { SpriteBuilder, Server, ImageProcessor } from 'bun-bundler/modules';
+import { SpriteBuilder } from 'bun-bundler/modules';
 import browserSync from 'browser-sync';
 const bundler = new Bundler();
 const spriteBuilder = new SpriteBuilder();
-const server = new Server();
-const imgProcessor = new ImageProcessor();
+// const server = new Server();
+// const imgProcessor = new ImageProcessor();
 
 const root = path.resolve('./');
 const dist = path.resolve('./dist');
@@ -52,10 +52,6 @@ const dev = () => {
 			});
 		},
 		onBuildComplete: () => {
-			imgProcessor.process({
-				debug: debugMode,
-				root: `${dist}/images/`,
-			});
 			spriteBuilder.build({
 				debug: debugMode,
 				htmlDir: dist,
@@ -63,7 +59,7 @@ const dev = () => {
 			});
 		},
 		onCriticalError: () => {
-			server.stopServer();
+			// server.stopServer();
 		},
 	});
 };

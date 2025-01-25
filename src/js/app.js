@@ -1,7 +1,6 @@
 import Accordion from './components/accordion';
 import marquee from './components/marquee';
 
-import header from './components/header';
 import layout from './layout/layout';
 import { indexPage } from './pages';
 import { articlePage } from './pages/article';
@@ -28,7 +27,6 @@ const app = () => {
 		});
 
 		marquee();
-		header();
 	});
 };
 
