@@ -1,4 +1,4 @@
-# Welcome to glivera-bun-template
+# Welcome to Codelibry bun template
 
 ## Get started
 
