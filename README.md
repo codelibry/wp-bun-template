@@ -1,15 +1,23 @@
-Welcome to glivera-bun-template
-Get started
-Install node.js, bun for your OS. https://bun.sh/docs/installation
+# Welcome to glivera-bun-template
 
-Reload VS Code and install npm packages bun install
+## Get started
 
-Let's code!
+1. Install node.js, bun for your OS. https://bun.sh/docs/installation
 
-bun run dev - File watching + server
-bun run build - Build (production mode)
-bun run staging - Build + dev widget (production mode)
-Template structure
+2. Reload VS Code and install npm packages
+   `bun install`
+
+3. Change BrowserSync proxy in "./dev-scripts/dev.mjs" proxy: 'http://your-site/',
+
+4. Let's code!
+
+- `bun run dev` - File watching + server
+- `bun run build` - Build (production mode)
+- `bun run staging` - Build + dev widget (production mode)
+
+## Template structure
+
+```
 build                        # Production build
 dev-dist                         # Dev build
 public                       # Production WP build
@@ -24,5 +32,13 @@ src                          # Sources
 ├── js                       # Scripts
 ├── pug                      # Layout
 ├── scss                     # Styles
-Rules:
-KBEM styles for class names. Kebab-case for all files - foo-bar-baz.ex For pug mixins - m-foo-bar-baz.pug
+```
+
+## Rules:
+
+KBEM styles for class names.
+Kebab-case for all files - foo-bar-baz.ex
+For pug mixins - m-foo-bar-baz.pug
+
+#
+#
