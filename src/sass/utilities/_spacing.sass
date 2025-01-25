@@ -1,0 +1,186 @@
+.section
+  padding-block: $section-padding-block
+  position: relative
+
+.mx-auto
+  margin-inline: auto
+
+.my-auto
+  margin-block: auto
+
+.mt-auto
+  margin-block-start: auto
+
+.mb-auto
+  margin-block-end: auto
+
+.mr-auto
+  margin-inline-end: auto
+
+.ml-auto
+  margin-inline-start: auto
+
+@each $size-name, $size-value in $sizes
+  .m
+    &-#{$size-name}
+      margin: $size-value
+    &t-#{$size-name}
+      margin-block-start: $size-value
+    &b-#{$size-name}
+      margin-block-end: $size-value
+    &y-#{$size-name}
+      margin-block: $size-value
+    &l-#{$size-name}
+      margin-inline-start: $size-value
+    &r-#{$size-name}
+      margin-inline-end: $size-value
+    &x-#{$size-name}
+      margin-inline: $size-value
+
+  .p
+    &-#{$size-name}
+      padding: $size-value
+    &t-#{$size-name}
+      padding-block-start: $size-value
+    &b-#{$size-name}
+      padding-block-end: $size-value
+    &y-#{$size-name}
+      padding-block: $size-value
+    &l-#{$size-name}
+      padding-inline-start: $size-value
+    &r-#{$size-name}
+      padding-inline-end: $size-value
+    &x-#{$size-name}
+      padding-inline: $size-value
+
+  .g
+    &-#{$size-name}
+      gap: $size-value
+    &x-#{$size-name}
+      column-gap: $size-value
+    &y-#{$size-name}
+      row-gap: $size-value
+
+
+  @include max-screen(large)
+    .m
+      &-lg-#{$size-name}
+        margin: $size-value
+      &t-lg-#{$size-name}
+        margin-block-start: $size-value
+      &b-lg-#{$size-name}
+        margin-block-end: $size-value
+      &y-lg-#{$size-name}
+        margin-block: $size-value
+      &l-lg-#{$size-name}
+        margin-inline-start: $size-value
+      &r-lg-#{$size-name}
+        margin-inline-end: $size-value
+      &x-lg-#{$size-name}
+        margin-inline: $size-value
+
+    .p
+      &-#{$size-name}
+        padding: $size-value
+      &t-lg-#{$size-name}
+        padding-block-start: $size-value
+      &b-lg-#{$size-name}
+        padding-block-end: $size-value
+      &y-lg-#{$size-name}
+        padding-block: $size-value
+      &l-lg-#{$size-name}
+        padding-inline-start: $size-value
+      &r-lg-#{$size-name}
+        padding-inline-end: $size-value
+      &x-lg-#{$size-name}
+        padding-inline: $size-value
+
+    .g
+      &-#{$size-name}
+        gap: $size-value
+      &x-lg-#{$size-name}
+        column-gap: $size-value
+      &y-lg-#{$size-name}
+        row-gap: $size-value
+
+  @include max-screen(medium)
+    .m
+      &-#{$size-name}
+        margin: $size-value
+      &t-md-#{$size-name}
+        margin-block-start: $size-value
+      &b-md-#{$size-name}
+        margin-block-end: $size-value
+      &y-md-#{$size-name}
+        margin-block: $size-value
+      &l-md-#{$size-name}
+        margin-inline-start: $size-value
+      &r-md-#{$size-name}
+        margin-inline-end: $size-value
+      &x-md-#{$size-name}
+        margin-inline: $size-value
+
+    .p
+      &-#{$size-name}
+        padding: $size-value
+      &t-md-#{$size-name}
+        padding-block-start: $size-value
+      &b-md-#{$size-name}
+        padding-block-end: $size-value
+      &y-md-#{$size-name}
+        padding-block: $size-value
+      &l-md-#{$size-name}
+        padding-inline-start: $size-value
+      &r-md-#{$size-name}
+        padding-inline-end: $size-value
+      &x-md-#{$size-name}
+        padding-inline: $size-value
+
+    .g
+      &-#{$size-name}
+        gap: $size-value
+      &x-md-#{$size-name}
+        column-gap: $size-value
+      &y-md-#{$size-name}
+        row-gap: $size-value
+
+  @include max-screen(small)
+    .m
+      &-#{$size-name}
+        margin: $size-value
+      &t-sm-#{$size-name}
+        margin-block-start: $size-value
+      &b-sm-#{$size-name}
+        margin-block-end: $size-value
+      &y-sm-#{$size-name}
+        margin-block: $size-value
+      &l-sm-#{$size-name}
+        margin-inline-start: $size-value
+      &r-sm-#{$size-name}
+        margin-inline-end: $size-value
+      &x-sm-#{$size-name}
+        margin-inline: $size-value
+
+    .p
+      &-#{$size-name}
+        padding: $size-value
+      &t-sm-#{$size-name}
+        padding-block-start: $size-value
+      &b-sm-#{$size-name}
+        padding-block-end: $size-value
+      &y-sm-#{$size-name}
+        padding-block: $size-value
+      &l-sm-#{$size-name}
+        padding-inline-start: $size-value
+      &r-sm-#{$size-name}
+        padding-inline-end: $size-value
+      &x-sm-#{$size-name}
+        padding-inline: $size-value
+
+    .g
+      &-#{$size-name}
+        gap: $size-value
+      &x-sm-#{$size-name}
+        column-gap: $size-value
+      &y-sm-#{$size-name}
+        row-gap: $size-value

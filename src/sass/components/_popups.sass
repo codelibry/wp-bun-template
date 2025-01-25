@@ -1,0 +1,23 @@
+.popup
+  width: 90%
+  max-width: $popup-width
+  padding: $popup-padding
+  border: $popup-border
+  border-radius: $popup-radius
+  z-index: 10
+  inset: 50%
+  transform: translate(-50%, -50%)
+  @include hide-scrollbar
+
+  &__close
+    border: 0
+    cursor: pointer
+    position: absolute
+    background: transparent
+
+    width: $popup-button-size
+    height: $popup-button-size
+    inset: $popup-button-inset
+
+    svg, img
+      @include image-contain

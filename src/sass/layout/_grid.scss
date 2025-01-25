@@ -1,0 +1,109 @@
+.row {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat($grid-columns-default, 1fr);
+  column-gap: $grid-column-gap-default;
+  row-gap: $grid-row-gap-default;
+
+  // LARGE
+  @include max-screen(large) {
+    grid-template-columns: repeat($grid-columns-large, 1fr);
+    column-gap: $grid-column-gap-large;
+    row-gap: $grid-row-gap-large;
+  }
+
+  // MEDIUM
+  @include max-screen(medium) {
+    grid-template-columns: repeat($grid-columns-medium, 1fr);
+    column-gap: $grid-column-gap-medium;
+    row-gap: $grid-row-gap-medium;
+  }
+
+  // SMALL
+  @include max-screen(small) {
+    grid-template-columns: repeat($grid-columns-small, 1fr);
+    column-gap: $grid-column-gap-small;
+    row-gap: $grid-row-gap-small;
+  }
+}
+
+// create all grid column classes
+@for $i from 1 through $grid-columns-default {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+
+  // create all grid column offset classes
+  @for $j from 1 through $grid-columns-default - $i {
+    @if $i < $grid-columns-default {
+      .col-#{$i}-offset-#{$j} {
+        display: flex;
+        grid-column-start: #{$j + 1};
+        grid-column-end: #{$i + $j + 1};
+      }
+    }
+  }
+}
+
+// create all grid column classes for large
+@for $i from 1 through $grid-columns-large {
+  @include max-screen(large) {
+    .col-lg-#{$i} {
+      grid-column: span #{$i};
+    }
+
+    // create all grid column offset classes for large
+    @for $j from 1 through $grid-columns-large - $i {
+      @if $i < $grid-columns-large {
+        .col-lg-#{$i}-offset-#{$j} {
+          display: flex;
+          grid-column-start: #{$j + 1};
+          grid-column-end: #{$i + $j + 1};
+        }
+      }
+    }
+  }
+}
+
+// create all grid column classes for medium
+@for $i from 1 through $grid-columns-medium {
+  @include max-screen(medium) {
+    .col-md-#{$i} {
+      grid-column: span #{$i};
+    }
+
+    // create all grid column offset classes for medium
+    @for $j from 1 through $grid-columns-medium - $i {
+      @if $i < $grid-columns-medium {
+        .col-md-#{$i}-offset-#{$j} {
+          display: flex;
+          grid-column-start: #{$j + 1};
+          grid-column-end: #{$i + $j + 1};
+        }
+      }
+    }
+  }
+}
+
+// create all grid column classes for small
+@for $i from 1 through $grid-columns-small {
+  @include max-screen(small) {
+    .col-sm-#{$i} {
+      grid-column: span #{$i};
+    }
+
+    // create all grid column offset classes for small
+    @for $j from 1 through $grid-columns-small - $i {
+      @if $i < $grid-columns-small {
+        .col-sm-#{$i}-offset-#{$j} {
+          display: flex;
+          grid-column-start: #{$j + 1};
+          grid-column-end: #{$i + $j + 1};
+        }
+      }
+    }
+  }
+}

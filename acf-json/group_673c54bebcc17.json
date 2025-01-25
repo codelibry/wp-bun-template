@@ -1,0 +1,43 @@
+{
+    "key": "group_673c54bebcc17",
+    "title": "Settings: Site settings",
+    "fields": [
+        {
+            "key": "field_673c54beeeecc",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hello! Here is quick guide to site settings:\r\n1. You can add\/edit your social media under \"Social Media\" tab\r\n2. You can edit text\/labels for your 404 page under \"404 - Error page\" tab\r\n3. You can add Analytics\/GTM\/Site verification codes and other marketing things under \"Scripts\" tab",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1732007276
+}

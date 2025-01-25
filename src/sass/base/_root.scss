@@ -1,0 +1,39 @@
+:root {
+  @each $color, $shade-map in $active-theme {
+    @each $shade, $value in $shade-map {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @if ($enable-media-query-dark-mode) {
+    &[data-mode="dark"] {
+      @each $color, $shade-map in $dark {
+        @each $shade, $value in $shade-map {
+          --clr-#{$color}-#{$shade}: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $screen-size, $size-map in $font-sizes {
+    @if $screen-size == large {
+      @each $size-name, $size-value in $size-map {
+        --fs-#{$size-name}: #{$size-value};
+      }
+    } @else {
+      @include max-screen($screen-size) {
+        @each $size-name, $size-value in $size-map {
+          --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
+
+  // GLOBAL SITE ZOOM 
+  $base-font-size: 16;
+  $min-font-size: 12;
+
+  @include min-screen(large) {
+    @include adaptive-value("font-size", $base-font-size, $min-font-size, 1);
+  }
+}

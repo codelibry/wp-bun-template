@@ -1,0 +1,126 @@
+.fade-up {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	transform: translateY(var(--initialTranslateY, em(50)));
+	opacity: 0;
+
+	&.in {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	@include reduced-motion {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	opacity: 0;
+
+	&.in {
+		opacity: 1;
+	}
+
+	@include reduced-motion {
+		opacity: 1;
+	}
+}
+
+.zoom-in {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	transform: scale(var(--initialScale, 1.2));
+
+	&.in {
+		transform: scale(1);
+	}
+
+	@include reduced-motion {
+		transform: scale(1);
+	}
+}
+
+.zoom-out {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	transform: scale(var(--initialScale, 0));
+
+	&.in {
+		transform: scale(1);
+	}
+
+	@include reduced-motion {
+		transform: scale(1);
+	}
+}
+
+.fade-left {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	transform: translateX(var(--initialTranslateX, em(50)));
+	opacity: 0;
+
+	&.in {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	@include reduced-motion {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.fade-right {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	transform: translateX(var(--initialTranslateX, em(-50)));
+	opacity: 0;
+
+	&.in {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	@include reduced-motion {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.move-left {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	transform: translateX(var(--initialTranslateX, em(-50)));
+
+	&.in {
+		transform: translateX(0);
+	}
+
+	@include reduced-motion {
+		transform: translateX(0);
+	}
+}
+
+.move-right {
+	transition: var(--duration, 1s) var(--easing, ease-out);
+	transform: translateX(var(--initialTranslateX, em(50)));
+
+	&.in {
+		transform: translateX(0);
+	}
+
+	@include reduced-motion {
+		transform: translateX(0);
+	}
+}
+
+// Generate utility classes for transition delays
+@for $i from 0 through 50 {
+	.delay-#{$i} {
+		transition-delay: ($i * 0.2s);
+	}
+}
+
+// Generate utility classes for transition durations
+@for $i from 0 through 20 {
+	.duration-#{$i} {
+		transition-duration: ($i * 0.2s);
+	}
+}

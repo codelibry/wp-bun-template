@@ -1,0 +1,38 @@
+@use 'sass:math';
+
+/*
+ * File Description:
+ *
+ * Here we will save our SCSS functions.
+ */
+
+/*
+ * Default HTML font-size (don't change)
+ */
+$base-font-size: 16;
+
+/*
+	* Converts pixels to rem.
+	*
+	* @param {number} $px - Value in pixels.
+	* @return {string} - Converted value in rem.
+	*
+	* Example:
+	* height: rem(240); // 15rem
+	*/
+@function rem($px) {
+	@return #{math.div($px, $base-font-size)}rem;
+}
+
+/*
+	* Converts pixels to em.
+	*
+	* @param {number} $px - Value in pixels.
+	* @return {string} - Converted value in em.
+	*
+	* Example:
+	* height: em(240); // 15em
+	*/
+@function em($px) {
+	@return calc(#{$px} / #{$base-font-size}) em;
+}
