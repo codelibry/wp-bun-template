@@ -19,7 +19,7 @@
 
 ```
 build                        # Production build
-dev-dist                         # Dev build
+dist                         # Dev build
 public                       # Production WP build
 helpers                      # All type samples and plugins
 ├── components               # Snippets & Vanilla js helpers
@@ -30,7 +30,6 @@ src                          # Sources
 │   ├── icons                # Icons
 │   |   ├── sprite-icons     # Icons used in sprite
 ├── js                       # Scripts
-├── pug                      # Layout
 ├── scss                     # Styles
 ```
 
