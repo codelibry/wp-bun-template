@@ -1,0 +1,41 @@
+.button
+  display: inline-flex
+  justify-content: center
+  cursor: pointer
+  text-decoration: none
+  line-height: 1
+  font-family: $button-font-family
+  font-size: $button-font-size
+  text-transform: $button-text-transform
+  font-weight: $button-font-weight
+  padding: $button-padding
+  border: $button-border
+  border-radius: $button-border-radius
+  transition: 275ms ease
+
+  background-color: $button-default-background
+  color: $button-default-color
+
+  //+can-hover
+  +can-hover
+    &:hover, &:focus
+      background-color: $button-default-background-hover
+      color: $button-default-color-hover
+
+  &--accent
+    background-color: $button-accent-background
+    color: $button-accent-color
+
+    +can-hover
+      &:hover, &:focus
+        background-color: $button-accent-background-hover
+        color: $button-accent-color-hover
+
+  &--primary
+    background-color: $button-primary-background
+    color: $button-primary-color
+
+    +can-hover
+      &:hover, &:focus
+        background-color: $button-primary-background-hover
+        color: $button-primary-color-hover

@@ -1,6 +1,7 @@
 <?php get_template_part('template-parts/footer/footer'); ?>
 
-</div> <!-- scroll inner -->
+</div> <!-- js-scroll-inner -->
+</div> <!-- js-scroll-inner -->
 </div> <!-- THE END OF WRAPPER -->
 
 <?php wp_footer() ?>

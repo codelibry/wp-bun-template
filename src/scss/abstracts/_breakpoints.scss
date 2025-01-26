@@ -1,0 +1,18 @@
+/*
+ * File Description:
+ *
+ * $breakpoints map is used in many files
+ * 
+ * Don't change the names of default breakpoints: small, medium, large.
+ * It can break a lot of things in the theme.
+ *
+ * However, you can change their values or add additional breakpoints
+ * if you need it in general
+ *
+ */
+
+$breakpoints: (
+  small: 30em,
+  medium: 45em,
+  large: 65em,
+);

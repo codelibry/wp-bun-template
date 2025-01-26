@@ -1,0 +1,82 @@
+/*
+ * File Description:
+ *
+ * $sizes map is used for generating spacing utilities
+ *
+ * For example:
+ * $sizes: (
+ *   4: rem(4)
+ * )
+ *
+ * By default for every $sizes row the following utilities will be generated:
+ *
+ * Margins:
+ * m-4  m-lg-4  m-md-4  m-sm-4
+ * mt-4 mt-lg-4 mt-md-4 mt-sm-4
+ * mb-4 mb-lg-4 mb-md-4 mb-sm-4
+ * ml-4 ml-lg-4 ml-md-4 ml-sm-4
+ * mr-4 mr-lg-4 mr-md-4 mr-sm-4
+ * mx-4 mx-lg-4 mx-md-4 mx-sm-4
+ * my-4 my-lg-4 my-md-4 my-sm-4
+ *
+ * Paddings:
+ * p-4  p-lg-4  p-md-4  p-sm-4
+ * pt-4 pt-lg-4 pt-md-4 pt-sm-4
+ * pb-4 pb-lg-4 pb-md-4 pb-sm-4
+ * pl-4 pl-lg-4 pl-md-4 pl-sm-4
+ * pr-4 pr-lg-4 pr-md-4 pr-sm-4
+ * px-4 px-lg-4 px-md-4 px-sm-4
+ * py-4 py-lg-4 py-md-4 py-sm-4
+ *
+ * Gaps:
+ * g-4  g-lg-4  g-md-4  g-sm-4
+ * gx-4 gx-lg-4 gx-md-4 gx-sm-4
+ * gy-4 gy-lg-4 gy-md-4 gy-sm-4
+ *
+ *
+ * Tips:
+ * 
+ * 1) All these classes are generated inside `utilities/_spacing.sass`
+ * based on this $sizes map. So, don't add a huge amount of rows in $sizes map
+ *
+ * 2) To reduce amount of classes, you can also amend `utilities/_spacing.sass` file
+ * For example, you can remove generating classes for `medium` breakpoint
+ *
+ */
+
+
+$sizes: (
+  0: rem(0),
+  4: rem(4),
+  8: rem(8),
+  12: rem(12),
+  16: rem(16),
+  20: rem(20),
+  24: rem(24),
+  28: rem(28),
+  32: rem(32),
+  36: rem(36),
+  48: rem(48),
+  60: rem(60),
+  80: rem(80),
+  96: rem(96),
+  128: rem(128),
+  160: rem(160),
+);
+
+$size-0: rem(0);
+$size-4: rem(4);
+$size-8: rem(8);
+$size-12: rem(12);
+$size-16: rem(16);
+$size-20: rem(20);
+$size-24: rem(24);
+$size-28: rem(28);
+$size-32: rem(32);
+$size-36: rem(36);
+$size-48: rem(48);
+$size-60: rem(60);
+$size-80: rem(80);
+$size-96: rem(96);
+$size-128: rem(128);
+$size-160: rem(160);

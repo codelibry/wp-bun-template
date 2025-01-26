@@ -1,0 +1,11 @@
+/*! purgecss start ignore */
+
+@each $color, $shade-map in $active-theme
+  @each $shade, $value in $shade-map
+    .clr-#{$color}-#{$shade}
+      color: var(--clr-#{$color}-#{$shade})
+
+    .bg-#{$color}-#{$shade}
+      background-color: var(--clr-#{$color}-#{$shade})
+
+/*! purgecss end ignore */

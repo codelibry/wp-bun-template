@@ -15,7 +15,7 @@ async function startDeploy({ server, username, password, folder }) {
 	const currentYear = new Date().getFullYear();
 	const localDir = './build/';
 	const serverDir = path.join(currentYear.toString(), folder).replace(/\\/g, '/');
-	const deployUrl = `https://test.glivera.com/team/tasks/${serverDir}`;
+	const deployUrl = `https://codelibry.com/team/tasks/${serverDir}`;
 
 	try {
 		await deploy({

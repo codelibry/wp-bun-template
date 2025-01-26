@@ -7,7 +7,7 @@
 
 		<div class="col-4 accordion">
 			<div class="accordion__item">
-				<div class="accordion__item_head">
+				<div class="accordion__item_head js-acc-trigger">
 					<h6 class="accordion__item_title">
 						Accordion Title #1
 					</h6>

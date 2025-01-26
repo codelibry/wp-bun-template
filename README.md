@@ -1,4 +1,4 @@
-# Welcome to Codelibry bun template
+# Welcome to glivera-bun-template
 
 ## Get started
 
@@ -7,9 +7,7 @@
 2. Reload VS Code and install npm packages
    `bun install`
 
-3. Change BrowserSync proxy in "./dev-scripts/dev.mjs" proxy: 'http://your-site/',
-
-4. Let's code!
+3. Let's code!
 
 - `bun run dev` - File watching + server
 - `bun run build` - Build (production mode)
@@ -19,7 +17,7 @@
 
 ```
 build                        # Production build
-dist                         # Dev build
+dev-dist                         # Dev build
 public                       # Production WP build
 helpers                      # All type samples and plugins
 ├── components               # Snippets & Vanilla js helpers
@@ -30,6 +28,7 @@ src                          # Sources
 │   ├── icons                # Icons
 │   |   ├── sprite-icons     # Icons used in sprite
 ├── js                       # Scripts
+├── pug                      # Layout
 ├── scss                     # Styles
 ```
 
@@ -39,5 +38,4 @@ KBEM styles for class names.
 Kebab-case for all files - foo-bar-baz.ex
 For pug mixins - m-foo-bar-baz.pug
 
-#
 #

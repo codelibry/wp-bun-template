@@ -7,12 +7,10 @@
 
 import path from 'path';
 import { Bundler } from 'bun-bundler';
-import { SpriteBuilder, Server, ImageProcessor } from 'bun-bundler/modules';
+import { SpriteBuilder } from 'bun-bundler/modules';
 import browserSync from 'browser-sync';
 const bundler = new Bundler();
 const spriteBuilder = new SpriteBuilder();
-const server = new Server();
-const imgProcessor = new ImageProcessor();
 
 const root = path.resolve('./');
 const dist = path.resolve('./dist');
@@ -23,12 +21,11 @@ const dev = () => {
 	bundler.watch({
 		production: process.env.NODE_ENV === 'production',
 		debug: debugMode,
-		html: () => Bundler.utils.getDirFiles(`${src}/pug/pages/`),
-		sass: [`${src}/sass/main.sass`],
+		sass: [`${src}/scss/app.scss`],
 		js: [`${src}/js/app.js`],
 		staticFolders: [`${src}/images/`, `${src}/fonts/`, `${src}/static/`],
 		dist,
-		htmlDist: dist,
+		htmlDir: dist,
 		cssDist: `${dist}/css/`,
 		assembleStyles: `${dist}/css/app.css`,
 		jsDist: `${dist}/js/`,
@@ -52,10 +49,6 @@ const dev = () => {
 			});
 		},
 		onBuildComplete: () => {
-			imgProcessor.process({
-				debug: debugMode,
-				root: `${dist}/images/`,
-			});
 			spriteBuilder.build({
 				debug: debugMode,
 				htmlDir: dist,
@@ -63,7 +56,7 @@ const dev = () => {
 			});
 		},
 		onCriticalError: () => {
-			server.stopServer();
+			console.log('Critical Error');
 		},
 	});
 };

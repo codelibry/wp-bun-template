@@ -1,0 +1,75 @@
+/*
+ * BASE RESET
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+ * RESET FOR CONTACT FORM 7
+ */
+.wpcf7-form {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  br,
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  .wpcf7-response-output {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    margin-top: $size-24 !important;
+  }
+}
+
+/*
+ * HIDE WPML FOOTER SIDEBAR
+ */
+.wpml-ls-statics-footer,
+.otgs-development-site-front-end {
+  display: none;
+}
+
+/*
+ * Base Lenis Setup
+ */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

@@ -1,15 +1,13 @@
 import Accordion from './components/accordion';
 import marquee from './components/marquee';
+import initScrollSmoother from './components/init-scroll-smoother';
 
 import header from './components/header';
 import layout from './layout/layout';
-import { indexPage } from './pages';
-import { articlePage } from './pages/article';
-import { uiPage } from './pages/ui';
 import { documentReady, pageLoad } from './utils';
 
 const styles = ['color: #fff', 'background: #cf8e1f'].join(';');
-const message = 'Developed by Glivera-team https://glivera-team.com/';
+const message = 'Who is the king of the gym?';
 
 // eslint-disable-next-line no-console
 console.info('%c%s', styles, message);
@@ -23,10 +21,11 @@ const app = () => {
 		document.body.classList.add('body--loaded');
 
 		const accordion = Accordion({
-			triggers: document.querySelectorAll('.accordion__item_head'),
+			triggers: document.querySelectorAll('.js-acc-trigger'),
 			activeStateName: 'accordion__item--active-mod',
 		});
 
+		initScrollSmoother();
 		marquee();
 		header();
 	});

@@ -28,7 +28,7 @@ if (!$faqs) {
 		<div class="accordion| mt-36">
 			<?php foreach ($faqs as $faq): ?>
 				<div class="accordion__item">
-					<div class="accordion__item_head">
+					<div class="accordion__item_head js-acc-trigger">
 						<h6 class="accordion__item_title">
 							<?php echo $faq['title'] ?>
 						</h6>

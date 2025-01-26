@@ -1,9 +1,5 @@
 // ----------------------------------------------------------
 
-body {
-	background-color: red !important;
-}
-
 .accordion__item_body {
 	color: #727272;
 	font-weight: 400;
@@ -60,7 +56,7 @@ body {
 		padding-right: 2rem;
 		font-size: rem(28);
 		transition: color ease 0.3s;
-		color: rgb(177, 38, 103) !important;
+		// color: red;
 	}
 
 	&:focus,

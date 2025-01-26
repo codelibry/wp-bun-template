@@ -1,0 +1,30 @@
+.logo-slider {
+	overflow: hidden;
+}
+
+.marquee__part {
+	flex-shrink: 0;
+	font-smooth: always;
+	padding-right: 4rem;
+}
+
+.marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: rgba(15, 15, 15, 0);
+	-webkit-text-stroke: 0.2rem rgba(#fff, 0.1);
+	font-size: 11rem;
+	// text-transform: uppercase;
+	font-weight: 900;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+.marquee__inner {
+	-webkit-font-smoothing: antialiased;
+	width: fit-content;
+	display: flex;
+	flex: auto;
+	flex-direction: row;
+}

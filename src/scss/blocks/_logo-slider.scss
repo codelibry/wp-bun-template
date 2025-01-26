@@ -1,0 +1,29 @@
+// Slider
+$transition-function: linear;
+$overflow-x: hidden;
+
+// Slide
+$slide-width: 10rem;
+$slide-height: 8rem;
+$slide-image-fit: contain;
+
+.logo-slider {
+  .swiper-wrapper {
+    transition-timing-function: $transition-function;
+  }
+
+  .container {
+    overflow-x: $overflow-x;
+  }
+
+  .swiper-slide {
+    width: $slide-width;
+    height: $slide-height;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: $slide-image-fit;
+    }
+  }
+}

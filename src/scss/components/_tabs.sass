@@ -1,0 +1,35 @@
+[role="tablist"]
+  display: flex
+  min-width: 100%
+  position: relative
+  background-color: inherit
+  z-index: 1
+
+  gap: $tabs-buttons-gap
+
+[role="tab"]
+  cursor: pointer
+  display: inline-block
+
+  background: $tabs-background
+  padding: $tabs-button-padding
+  border: $tabs-border
+
+  &:hover, &:focus
+    background: $tabs-background-hover
+
+  &[aria-selected="true"]
+    background: $tabs-background
+    border-bottom: 2px solid $tabs-background
+
+  &[aria-selected="false"]
+    border-bottom: $tabs-border
+
+[role="tabpanel"]
+  margin-top: -1px
+  border: $tabs-border
+  padding: $tabs-panel-padding
+  background: $tabs-background
+
+  &.is-hidden
+    display: none
