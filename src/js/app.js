@@ -2,7 +2,6 @@ import Accordion from './components/accordion';
 import marquee from './components/marquee';
 import initScrollSmoother from './components/init-scroll-smoother';
 
-import header from './components/header';
 import layout from './layout/layout';
 import { documentReady, pageLoad } from './utils';
 
@@ -27,7 +26,6 @@ const app = () => {
 
 		initScrollSmoother();
 		marquee();
-		header();
 	});
 };
 
