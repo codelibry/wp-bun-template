@@ -1,4 +1,4 @@
-# Welcome to glivera-bun-template
+# Welcome to bun-template
 
 ## Get started
 
@@ -6,8 +6,10 @@
 
 2. Reload VS Code and install npm packages
    `bun install`
+   
+4. Change proxy name in ./dev-scripts/dev.mjs  proxy: 'http://enter your site/',
 
-3. Let's code!
+5. Let's code!
 
 - `bun run dev` - File watching + server
 - `bun run build` - Build (production mode)
@@ -28,14 +30,12 @@ src                          # Sources
 │   ├── icons                # Icons
 │   |   ├── sprite-icons     # Icons used in sprite
 ├── js                       # Scripts
-├── pug                      # Layout
 ├── scss                     # Styles
 ```
 
 ## Rules:
 
-KBEM styles for class names.
+BEM styles for class names.
 Kebab-case for all files - foo-bar-baz.ex
-For pug mixins - m-foo-bar-baz.pug
 
 #
