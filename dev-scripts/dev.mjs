@@ -31,7 +31,7 @@ const dev = () => {
 		jsDist: `${dist}/js/`,
 		onStart: () => {
 			browserSync.init({
-				proxy: 'http://woocommerce/',
+				proxy: 'http://bun-light/',
 				port: 3000,
 				// reloadDebounce: 500,
 				files: [

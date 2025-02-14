@@ -10,19 +10,19 @@ $phone = get_field('phone', 'option');
 <header class="header js-header" id="header">
 
 	<!-- Header Top -->
-	<div class="header-top">
-		<div class="container">
-			<div class="header-top__inner">
+	<div class="header__top">
+		<div class="section_in">
+			<div class="header__inner">
 				<?php if ($email): ?>
-					<a class="header-top__link" <?php acf_link_attrs($email) ?>>
-						<span class="header-top__label"><?php _e('E-Mail') ?></span>
-						<span class="header-top__value"><?php echo $email['title'] ?></span>
+					<a class="header__link" <?php acf_link_attrs($email) ?>>
+						<span class="header__label"><?php _e('E-Mail') ?></span>
+						<span class="header__value"><?php echo $email['title'] ?></span>
 					</a>
 				<?php endif; ?>
 				<?php if ($phone): ?>
-					<a class="header-top__link" <?php acf_link_attrs($phone) ?>>
-						<span class="header-top__label"><?php _e('Tel.') ?></span>
-						<span class="header-top__value"><?php echo $phone['title'] ?></span>
+					<a class="header__link" <?php acf_link_attrs($phone) ?>>
+						<span class="header__label"><?php _e('Tel.') ?></span>
+						<span class="header__value"><?php echo $phone['title'] ?></span>
 					</a>
 				<?php endif; ?>
 			</div>
@@ -30,10 +30,10 @@ $phone = get_field('phone', 'option');
 	</div>
 	<!-- Header Top End -->
 
-	<div class="container">
+	<div class="section_in">
 		<div class="header__inner">
 			<?php if ($logo): ?>
-				<a class="header__logo | site-logo" href="<?php echo home_url() ?>">
+				<a class="header__logo" href="<?php echo home_url() ?>">
 					<img <?php acf_image_attrs($logo) ?> />
 				</a>
 			<?php endif; ?>
@@ -46,13 +46,9 @@ $phone = get_field('phone', 'option');
 			]) ?>
 
 			<?php if ($button): ?>
-				<a class="header__button | button | d-lg-none" <?php acf_link_attrs($button) ?>>
+				<a class="header__button | button " <?php acf_link_attrs($button) ?>>
 					<?php echo $button['title'] ?>
 				</a>
-
-				<button class="js-toggle-mode">
-					Mode Toggle
-				</button>
 			<?php endif; ?>
 
 

@@ -1,6 +1,5 @@
 import Accordion from './components/accordion';
 import marquee from './components/marquee';
-import initScrollSmoother from './components/init-scroll-smoother';
 
 import layout from './layout/layout';
 import { documentReady, pageLoad } from './utils';
@@ -24,7 +23,6 @@ const app = () => {
 			activeStateName: 'accordion__item--active-mod',
 		});
 
-		initScrollSmoother();
 		marquee();
 	});
 };

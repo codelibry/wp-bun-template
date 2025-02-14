@@ -44,11 +44,8 @@ if (!empty($_COOKIE['mode'])) {
 	?>
 
 	<div class="wrapper">
+
 		<?php
 		get_template_part('template-parts/skip-links');
 		get_template_part('template-parts/header/header');
-		?>
-		<div class="js-scroll-wrapper">
-			<div class="wrapper__in js-scroll-inner">
-				<?php
-				get_template_part('template-parts/breadcrumbs');
+		get_template_part('template-parts/breadcrumbs');
