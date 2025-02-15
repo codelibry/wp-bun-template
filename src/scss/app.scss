@@ -2,15 +2,15 @@
 @import 'helpers/mixins/forms/form-default-input';
 @import 'helpers/mixins/forms/form-default-checkbox';
 @import 'helpers/mixins/forms/form-default-radio';
-// base
+// // base
 @import 'base/base';
-//layout
+// //layout
 @import 'layout/layout';
-//crirical
-@import 'critical/critical';
-// ui
+// //crirical
+// @import 'critical/critical';
+// // ui
 @import 'ui/ui';
-// ui page
+// // ui page
 @import 'components/universal/ui-page/main';
 @import 'components/universal/ui-page/ui-heading';
 @import 'components/universal/ui-page/typography';
@@ -18,5 +18,6 @@
 @import 'components/universal/ui-page/forms';
 @import 'components/universal/ui-page/components';
 
-//component
-@import 'components/accordion';
+.header {
+	background-color: #663399;
+}
