@@ -30,7 +30,10 @@ function codelibry_enqueue()
 
 	/* Styles */
 
-	wp_enqueue_style('main', "{$DIST}/css/app.css", array(), $style_version, 'all');
+	/* Styles */
+	wp_enqueue_style('critical', "{$DIST}/css/critical.css", array(), $style_version, 'all');
+	wp_enqueue_style('main', "{$DIST}/css/app.css", array('critical'), $style_version, 'all');
+
 
 
 	/* JavaScript */
